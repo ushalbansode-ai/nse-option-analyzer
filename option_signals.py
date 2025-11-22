@@ -19,7 +19,7 @@ class AdvancedOptionSignalGenerator:
             "RELIANCE", "TCS", "INFY", "HDFCBANK", "ICICIBANK",
             "KOTAKBANK", "HDFC", "BHARTIARTL", "ITC", "SBIN"
         ]
-            def _session(self):
+    def _session(self):
         """Return a requests session primed for NSE."""
         s = requests.Session()
         headers = {
