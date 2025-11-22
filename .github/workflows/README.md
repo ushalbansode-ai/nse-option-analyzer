@@ -1,14 +1,14 @@
 # 🎯 NSE Option Trading Signals
 
-[![GitHub Actions](https://github.com/your-username/nse-option-signals/actions/workflows/update_signals.yml/badge.svg)](https://github.com/your-username/nse-option-signals/actions)
-[![Live Signals](https://img.shields.io/badge/Live-Signals-brightgreen)](https://your-username.github.io/nse-option-signals/)
-[![Update Frequency](https://img.shields.io/badge/Updates-5--min%20during%20market hours-blue)](https://github.com/your-username/nse-option-signals)
+[![GitHub Actions](https://github.com/ushalbansode-ai/nse-option-signals/actions/workflows/update_signals.yml/badge.svg)](https://github.com/ushalbansode-ai/nse-option-signals/actions)
+[![Live Signals](https://img.shields.io/badge/Live-Signals-brightgreen)](https://ushalbansode-ai.github.io/nse-option-signals/)
+[![Update Frequency](https://img.shields.io/badge/Updates-5--min%20during%20market hours-blue)](https://github.com/ushalbansode-ai/nse-option-signals)
 
 Live option buying signals for **Nifty, Bank Nifty, and 20 most liquid F&O stocks** based on real-time option chain data from NSE.
 
 ## 🚀 Live Dashboard
 
-**👉 [View Live Signals Dashboard](https://your-username.github.io/nse-option-signals/)**
+**👉 [View Live Signals Dashboard](https://ushalbansode-ai.github.io/nse-option-signals/)**
 
 *Auto-updates every 5 minutes during market hours (9:15 AM - 3:30 PM IST)*
 
