@@ -1,3 +1,4 @@
+
 # 🎯 NSE Option Trading Signals
 
 [![GitHub Actions](https://github.com/ushalbansode-ai/nse-option-signals/actions/workflows/update_signals.yml/badge.svg)](https://github.com/ushalbansode-ai/nse-option-signals/actions)
@@ -37,3 +38,4 @@ Live option buying signals for **Nifty, Bank Nifty, and 20 most liquid F&O stock
 3. **Other ±5 strikes** - With distance-based scoring
 
 ## 📁 Project Structure
+
