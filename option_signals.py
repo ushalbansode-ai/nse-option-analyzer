@@ -357,33 +357,26 @@ class AdvancedOptionSignalGenerator:
 
         except Exception as e:
             print(f"❌ Error writing JSON {filename}: {e}")
-            # ------------------ PART 6 : MAIN RUNNER ------------------
+            # ------------------ FIXED MAIN RUNNER ------------------
 
 def main():
-    print("\n🔵 Starting NSE Option Dashboard Builder...")
+    print("\n🔵 Starting NSE Option Signals Engine...")
 
     try:
-        engine = OptionDashboard()
+        engine = AdvancedOptionSignalGenerator()
 
-        # 1. Fetch latest NSE data
-        print("🔹 Fetching option chain...")
-        engine.fetch_data()
+        print("🔹 Running full analysis...")
+        results = engine.run_all()
 
-        # 2. Process & filter
-        print("🔹 Processing data...")
-        engine.process_option_data()
+        # Save latest JSON for GitHub Pages
+        print("🔹 Saving signals JSON...")
+        os.makedirs("signals", exist_ok=True)
+        engine.save_json("signals/latest.json", results["signals"])
 
-        # 3. Generate BUY signals
-        print("🔹 Generating signals...")
-        signals = engine.generate_signals()
-
-        # 4. Save dashboard JSON for GitHub Pages
-        print("🔹 Saving dashboard data...")
-        engine.save_json("docs/dashboard.json", signals)
-
-        print("\n✅ Completed successfully.")
-        print("📁 Output generated:")
-        print("   • docs/dashboard.json (LIVE dashboard data)")
+        print("\n✅ All tasks completed successfully.")
+        print("📁 Files generated:")
+        print("   • signals/latest.json")
+        print("   • docs/dashboard.json")
         print("   • option_signals.csv")
         print("   • detailed_option_data.csv\n")
 
