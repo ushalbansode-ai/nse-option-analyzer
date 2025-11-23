@@ -694,7 +694,7 @@ def generate_advanced_dashboard(signals, market_data, out_path="docs/index.html"
 def main():
     """Main function to run the option signals system"""
     print("Starting Option Signals Analysis...")
-    trading_system = LiveOptionTradingSystem()
+    trading_system = Option signals()
     
     try:
         signals = trading_system.run_analysis()
