@@ -110,7 +110,7 @@ class AdvancedOptionSignalGenerator:
             }
         except Exception as e:
             print(f"{PRINT_PREFIX} ❌ Error analyzing {symbol}: {str(e)}")
-            return None
+            return None                                                                                                           
      def calculate_pcr(self, data_rows):
           """Compute PCR based on aggregated OI and volume - FIXED for indices."""
         total_ce_oi = total_pe_oi = 0
