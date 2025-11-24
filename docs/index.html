@@ -73,13 +73,21 @@
 </div>
 
 <script>
-fetch("docs/dashboard.json?v=" + Date.now())
+fetch("./dashboard.json?v=" + Date.now())
 .then(res => {
     if(!res.ok) throw new Error("Failed to load JSON");
     return res.json();
 })
 .then(data => {
     document.getElementById("updated").innerText = "Last Updated: " + (data.last_updated || "—");
+
+    // ...rest of your rendering code...
+})
+.catch(err => {
+    document.getElementById("updated").innerText = "Failed to load data";
+    console.error(err);
+});
+    
 
     // Top cards
     const top = document.getElementById("topCards");
