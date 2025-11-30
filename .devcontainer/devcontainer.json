@@ -1,0 +1,30 @@
+{
+    "name": "Option Chain Analyzer",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
+    "forwardPorts": [5000],
+    "postCreateCommand": "pip install --upgrade pip && pip install -r backend/requirements.txt",
+    "postAttachCommand": "cd backend && python run.py",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "formulahendry.auto-rename-tag"
+            ],
+            "settings": {
+                "python.pythonPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true
+            }
+        }
+    },
+    "portsAttributes": {
+        "5000": {
+            "label": "Option Chain Dashboard",
+            "onAutoForward": "openPreview"
+        }
+    }
+}
