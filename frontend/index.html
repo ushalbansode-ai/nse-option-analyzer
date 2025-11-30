@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSE Option Chain Analyzer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">
+                <i class="fas fa-chart-line"></i> NSE Option Chain Analyzer
+            </span>
+            <div class="navbar-text">
+                Last Updated: <span id="last-update">-</span>
+            </div>
+        </div>
+    </nav>
 
+    <div class="container-fluid mt-3">
+        <!-- Symbol Tabs -->
+        <ul class="nav nav-tabs" id="symbolTabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-symbol="NIFTY">NIFTY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-symbol="BANKNIFTY">BANKNIFTY</a>
+            </li>
+        </ul>
+
+        <!-- Key Metrics -->
+        <div class="row mt-3" id="key-metrics">
+            <!-- Dynamic content -->
+        </div>
+
+        <!-- Charts -->
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>OI Skew Analysis</h6>
+                    </div>
+                    <div class="card-body">
+                        <div id="oi-skew-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Volume-OI Efficiency</h6>
+                    </div>
+                    <div class="card-body">
+                        <div id="volume-oi-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option Chain Table -->
+        <div class="card mt-3">
+            <div class="card-header d-flex justify-content-between">
+                <h6>Option Chain Data</h6>
+                <div>
+                    <input type="text" id="search-strike" placeholder="Search strike..." class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-sm table-hover" id="option-chain-table">
+                        <thead>
+                            <tr>
+                                <th>Strike</th>
+                                <th>CE OI</th>
+                                <th>CE Chg OI</th>
+                                <th>CE Volume</th>
+                                <th>CE V/OI</th>
+                                <th>CE Build</th>
+                                <th>OI Skew</th>
+                                <th>PE Build</th>
+                                <th>PE V/OI</th>
+                                <th>PE Volume</th>
+                                <th>PE Chg OI</th>
+                                <th>PE OI</th>
+                            </tr>
+                        </thead>
+                        <tbody id="chain-table-body">
+                            <!-- Dynamic content -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
